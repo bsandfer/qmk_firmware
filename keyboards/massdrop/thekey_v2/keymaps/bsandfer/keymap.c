@@ -23,16 +23,16 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     /* Default */
-    [0] = LAYOUT(LAYER_SWITCH, KC_MS_BTN2, KC_MS_BTN1),
+    [0] = LAYOUT(LAYER_SWITCH, KC_MS_BTN1, KC_MS_BTN2),
 
     /* RGB Toggle + Mode Change */
-    [1] = LAYOUT(LAYER_SWITCH, KC_PGUP, KC_PGDN),
+    [1] = LAYOUT(LAYER_SWITCH, RGB_TOG, RGB_MOD),
 
     /* RGB Brightness */
     [2] = LAYOUT(LAYER_SWITCH, RGB_VAD, RGB_VAI),
 
     /* RGB Hue */
-    [3] = LAYOUT(LAYER_SWITCH, RGB_MOD, RGB_HUI),
+    [3] = LAYOUT(LAYER_SWITCH, RGB_HUD, RGB_HUI),
 
     /* RGB Saturation */
     [4] = LAYOUT(LAYER_SWITCH, RGB_SAD, RGB_SAI),
@@ -107,3 +107,4 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return true;
     }
 }
+v
