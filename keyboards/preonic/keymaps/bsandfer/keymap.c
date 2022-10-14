@@ -114,8 +114,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ADJUST] = LAYOUT_preonic_grid(
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_EJCT,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, QK_RBT,
-  _______, _______, _______, _______, _______, _______, RGB_HUI, RGB_VAI, RGB_SAI, RGB_MOD, RGB_SPI, _______,
-  _______, _______, _______, _______, _______, _______, RGB_HUD, RGB_VAD, RGB_SAD, RGB_RMOD, RGB_SPD, _______,
+  _______, _______, _______, _______, MU_ON  , _______, RGB_HUI, RGB_VAI, RGB_SAI, RGB_MOD, RGB_SPI, _______,
+  _______, _______, _______, _______, MU_OFF , _______, RGB_HUD, RGB_VAD, RGB_SAD, RGB_RMOD, RGB_SPD, _______,
   RGB_TOG, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 )
 
@@ -174,10 +174,10 @@ uint16_t muse_tempo = 50;
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [_QWERTY] = { ENCODER_CCW_CW(KC_MS_WH_DOWN, KC_MS_WH_UP), ENCODER_CCW_CW(KC_MS_WH_DOWN, KC_MS_WH_UP) },
-    [_LOWER] = { ENCODER_CCW_CW(KC_VOLU, KC_VOLD), ENCODER_CCW_CW(KC_VOLU, KC_VOLD) },
-    [_RAISE] = { ENCODER_CCW_CW(KC_RIGHT, KC_LEFT), ENCODER_CCW_CW(KC_RIGHT, KC_LEFT) },
-    [_ADJUST] = { ENCODER_CCW_CW(RGB_VAI, RGB_VAD), ENCODER_CCW_CW(RGB_VAI, RGB_VAD) },
+    [_QWERTY] = { ENCODER_CCW_CW(KC_MS_WH_DOWN, KC_MS_WH_UP) },
+    [_LOWER] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [_RAISE] = { ENCODER_CCW_CW(KC_LEFT, KC_RIGHT) },
+    [_ADJUST] = { ENCODER_CCW_CW(RGB_VAD, RGB_VAI) },
 };
 #endif
 
